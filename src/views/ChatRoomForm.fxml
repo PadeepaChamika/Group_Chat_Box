@@ -2,23 +2,103 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="clientAnchorPaneContext" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientFormController">
+<AnchorPane fx:id="clientAnchorPaneContext" prefHeight="408.0" prefWidth="600.0" style="-fx-background-color: #52595D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientFormController">
     <children>
-        <Label fx:id="lblClient" layoutX="14.0" layoutY="14.0" text="Client">
-            <font>
-                <Font name="Bell MT Bold" size="25.0" />
-            </font>
-        </Label>
-        <Separator layoutX="14.0" layoutY="44.0" prefHeight="3.0" prefWidth="559.0" />
-        <TextArea fx:id="txtArea" layoutX="14.0" layoutY="56.0" prefHeight="294.0" prefWidth="559.0" />
-        <TextField fx:id="txtClientMassage" layoutX="14.0" layoutY="361.0" prefHeight="25.0" prefWidth="458.0" />
-        <Button layoutX="487.0" layoutY="361.0" mnemonicParsing="false" onAction="#sendOnAction" prefHeight="25.0" prefWidth="86.0" text="Send" />
+        <TextField fx:id="txtClientMassage" layoutX="14.0" layoutY="361.0" prefHeight="25.0" prefWidth="388.0" />
+        <Button layoutX="487.0" layoutY="361.0" mnemonicParsing="false" onAction="#sendOnAction" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #C9C0BB;" text="Send" />
+      <AnchorPane layoutX="15.0" layoutY="3.0" prefHeight="50.0" prefWidth="559.0" style="-fx-background-color: #3A3B3C;">
+         <children>
+              <Label fx:id="lblClient" layoutX="246.0" layoutY="-1.0" text="Client" textFill="WHITE">
+                  <font>
+                      <Font name="Bell MT Bold" size="25.0" />
+                  </font>
+              </Label>
+              <Separator layoutX="8.0" layoutY="36.0" prefHeight="3.0" prefWidth="544.0" />
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="15.0" layoutY="60.0" prefHeight="289.0" prefWidth="559.0">
+         <content>
+            <HBox prefHeight="55.0" prefWidth="548.0">
+               <children>
+                  <VBox fx:id="vBoxPane" prefHeight="55.0" prefWidth="550.0" />
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+      <ImageView fx:id="imgEmoji" fitHeight="31.0" fitWidth="30.0" layoutX="412.0" layoutY="359.0" onMouseClicked="#emogiPanalOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/photo_2022-08-19_16-41-31.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="449.0" layoutY="359.0" onMouseClicked="#emageSendOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/photo_2022-08-19_16-41-13.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="emogiPane" layoutX="149.0" layoutY="249.0" prefHeight="125.0" prefWidth="293.0" style="-fx-background-color: gray;">
+         <children>
+            <ImageView fx:id="emogi1" fitHeight="50.0" fitWidth="49.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#sendingEmogiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/emoji/1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="emogi2" fitHeight="50.0" fitWidth="49.0" layoutX="74.0" layoutY="14.0" onMouseClicked="#sendingEmogiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/emoji/2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="emogi3" fitHeight="50.0" fitWidth="49.0" layoutX="130.0" layoutY="14.0" onMouseClicked="#sendingEmogiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/emoji/3.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="emogi4" fitHeight="50.0" fitWidth="49.0" layoutX="187.0" layoutY="14.0" onMouseClicked="#sendingEmogiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/emoji/4.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="emogi5" fitHeight="50.0" fitWidth="49.0" layoutX="242.0" layoutY="14.0" onMouseClicked="#sendingEmogiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/emoji/5.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="emogi6" fitHeight="50.0" fitWidth="49.0" layoutX="14.0" layoutY="63.0" onMouseClicked="#sendingEmogiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/emoji/6.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="emogi7" fitHeight="50.0" fitWidth="49.0" layoutX="74.0" layoutY="63.0" onMouseClicked="#sendingEmogiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/emoji/7.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="emogi8" fitHeight="50.0" fitWidth="49.0" layoutX="130.0" layoutY="63.0" onMouseClicked="#sendingEmogiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/emoji/8.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="emogi9" fitHeight="50.0" fitWidth="49.0" layoutX="187.0" layoutY="63.0" onMouseClicked="#sendingEmogiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/emoji/9.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="emogi10" fitHeight="50.0" fitWidth="49.0" layoutX="242.0" layoutY="63.0" onMouseClicked="#sendingEmogiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/emoji/10.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
     </children>
 
 </AnchorPane>

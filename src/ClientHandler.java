@@ -10,12 +10,25 @@ public class ClientHandler extends Thread {
     private Socket socket;
     public BufferedReader in;
     public PrintWriter writer;
+    /*//============================================
 
+    private static int fileID;
+
+    public static int getFileID() {
+        return fileID;
+    }
+
+    public static void setFileID(int aFileID) {
+        fileID = aFileID;
+    }
+
+    //============================================*/
     public ClientHandler(Socket socket, ArrayList<ClientHandler> clients) throws IOException {
         this.clients=clients;
         this.socket=socket;
         this.in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         this.writer = new PrintWriter(socket.getOutputStream(), true);
+        /*fileID = 1;*/
     }
 
     @Override

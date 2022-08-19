@@ -7,20 +7,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="loginAnchorPaneContext" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+<AnchorPane fx:id="loginAnchorPaneContext" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #52595D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
     <children>
-        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" text="Login">
-            <font>
-                <Font name="Bell MT Bold" size="25.0" />
-            </font>
-        </Label>
-        <Separator layoutX="14.0" layoutY="44.0" prefHeight="3.0" prefWidth="559.0" />
         <TextField fx:id="txtUsername" layoutX="206.0" layoutY="188.0" prefHeight="25.0" prefWidth="191.0" />
-        <Button layoutX="228.0" layoutY="233.0" mnemonicParsing="false" onAction="#loginOnAction" prefHeight="25.0" prefWidth="132.0" text="Send" />
-      <Label layoutX="239.0" layoutY="147.0" text="User Name">
+        <Button layoutX="236.0" layoutY="233.0" mnemonicParsing="false" onAction="#loginOnAction" prefHeight="25.0" prefWidth="132.0" text="Login">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font></Button>
+      <Label layoutX="239.0" layoutY="147.0" text="User Name" textFill="WHITE">
          <font>
             <Font name="Bell MT Bold" size="25.0" />
          </font>
       </Label>
+      <AnchorPane prefHeight="49.0" prefWidth="600.0" style="-fx-background-color: #3A3B3C;">
+         <children>
+              <Label alignment="CENTER" layoutX="268.0" layoutY="9.0" text="Login" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                      <Font name="Bell MT Bold" size="25.0" />
+                  </font>
+              </Label>
+              <Separator layoutX="27.0" layoutY="39.0" prefHeight="3.0" prefWidth="559.0" />
+         </children>
+      </AnchorPane>
     </children>
 </AnchorPane>
